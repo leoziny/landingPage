@@ -1,0 +1,40 @@
+.customer-bg{
+    background-color: var(--cor-prata);
+}
+
+.informacoes-customer p{
+    margin-bottom: 10px;
+}
+.informacoes-customer{
+    grid-column: 2/4;
+}
+
+.customer{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.lista-customer{
+    align-items: center;
+    gap: 20px;
+}
+
+.imagem-customer img{
+    border-radius: 8px;
+}
+
+@media (max-width: 836px) {
+    .customer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .imagem-customer img{
+        display: none;
+    }
+    .lista-customer{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

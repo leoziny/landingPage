@@ -1,0 +1,51 @@
+.footer-bg{
+    background-color: var(--cor-secundaria);
+}
+.footer{
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    
+}
+.principal-footer{
+    grid-column: 1/3;
+    align-items: start;
+}
+.company a:hover, .support a:hover{
+    border-bottom: 2px solid white;
+}
+#email{
+    background-color: rgba(255, 255, 255, 0.315);
+    border-radius: 8px;
+    padding: 12px;
+    width: 260px;
+}
+.input{
+    position: relative;
+}
+.input button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 18px;
+    top: 13px;
+    cursor: pointer;
+    
+}
+.input input::placeholder{
+    color: #D9DBE1;
+    opacity: 1;
+}
+@media (max-width: 845px){
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .principal-footer{
+        grid-column: 1;
+    }
+    .stay-up{
+        display: none;
+    }
+}

@@ -1,0 +1,173 @@
+
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 90px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 24px;
+}
+.header{
+  display: flex;
+}
+
+  .titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .text-centro{
+    text-align: center;
+  }
+  /* display flex para diversas situações */
+
+  .flex-centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .flex-centro.row{
+    flex-direction: row;
+  }
+  .flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .flex.row{
+    flex-direction: row;
+  }
+  .flex.spacebet{
+    justify-content: space-between;
+    flex-direction: column;
+
+  }
+.flex.spacearound{
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.gap10{
+  gap: 10px;
+}
+  /* display grid para diversas situações */
+  
+  .grid-2-c{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .grid-1{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+   /* botões */
+
+   .button {
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 32px;
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background-color: var(--brand-primary);
+    position: relative;
+
+
+  }
+  .button:hover, .button.medio:hover{
+    background-color: var(--cor-sombra-3);
+  }
+  
+  
+  
+  .button.medio {
+    background-color: var(--brand-primary);
+    padding: 10px 28px;
+    
+  }
+  
+  .button.medio.transparent{
+    background-color: transparent;
+    color: var(--brand-primary);
+
+  }
+  
+  .button.small {
+    background-color: var(--brand-primary);
+    padding: 8px 10px;
+    height: 32px;
+  }
+
+  
+
+  .button:focus{
+    border: 2px solid var(--cor-d-cinza);
+  }
+  .button:active, .button.medio:active, .button.small:active{
+    background-color: var(--cor-sombra-2);
+  }
+  .button.seta:hover::after{
+    transform: translateX(4px);
+
+  }
+  .button.seta {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .button.seta::after {
+    content: "";
+    position: relative;
+    width: 17px;
+    left: 9px;
+    height: 9px;
+    background: url("../../img/icons/24/arrows/Right.svg");
+    transition: transform 0.2s;
+  }
+
+  .button.medio.seta::after{
+   right: 6px;
+
+  }
+  
+
+  .button.small.seta::after{
+    left: 4px;
+    position: relative;
+  }
+
+
+  .button.mais-icon::after{
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 26px;
+    left: 4px;
+    top: 6px;
+    background: url("../../img/icons/24/userInterface/+.svg");
+    transition: transform 0.2s;
+  }
+
+  .button.small.mais-icon::after{
+    background: url("../../img/icons/16/userInterface/+.svg");
+    width: 14px;
+    height: 14px;
+    top: 7px;
+    left: 1px;
+    
+  }
+  
+
+

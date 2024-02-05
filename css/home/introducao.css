@@ -1,0 +1,50 @@
+.main-bg{
+    background-color: var(--cor-prata);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+.informacoes-main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+.imagem-main img{
+    width: 600px;
+    height: 407px;
+}
+
+.bola-slide{
+    display: flex;
+    gap: 7px;
+    position: absolute;
+    bottom: 20px;
+}
+.bola{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--cor-tinta-3);
+}
+.bola.ativo{
+    background-color: var(--brand-primary);
+}
+@media (max-width: 768px){
+    .informacoes-main{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 45px;
+    }
+    .imagem-main img{
+        display: none;
+    }
+    .bola{
+        display: none;
+    }
+}

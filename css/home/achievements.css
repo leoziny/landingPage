@@ -1,0 +1,23 @@
+.lista-conquistas{
+    gap: 40px;
+}
+.lista-conquistas li {
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 820px){
+    .achievements{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .informacoes-ach > p{
+        margin-bottom: 30px;
+    }
+    .lista-conquistas{
+        grid-template-columns: 1fr;
+    }
+}

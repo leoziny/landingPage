@@ -1,0 +1,42 @@
+
+.informacoes-comunidade{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.informacoes-comunidade p, .informacoes-comunidade h2{
+    max-width: 70ch;
+    margin-bottom: 10px;
+}
+
+.lista-comunidade{
+    gap: 20px;
+}
+
+.lista-comunidade li{
+    position: relative;
+    
+}
+.card-comunidade{
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    width: 280px;
+    bottom: -40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
+    text-align: center;
+}
+
+@media (max-width: 1130px){
+    .lista-comunidade{
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+    .card-comunidade{
+        width: 220px;
+        padding: 6px;
+        bottom: -60px;
+    }
+}

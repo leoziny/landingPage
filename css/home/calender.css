@@ -1,0 +1,18 @@
+
+
+.informacoes-calender h2{
+    margin-bottom: 15px;
+}
+.informacoes-calender p{
+    margin-bottom: 30px;
+}
+
+@media (max-width: 836px){
+    .calender{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+}

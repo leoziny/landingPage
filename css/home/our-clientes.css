@@ -1,0 +1,17 @@
+
+
+.lista-clientes{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 1334px){
+    .lista-clientes{
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 90px;
+    }
+}

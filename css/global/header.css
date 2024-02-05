@@ -1,0 +1,124 @@
+.header-bg{
+    background-color: var(--cor-prata);
+    position: relative;
+}
+.header{
+    justify-content: space-between;
+    align-items: center;
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+}
+.logo{
+    display: flex;
+    gap: 5px;
+}
+.navegacao-primaria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lista-primaria{
+    display: flex;
+    gap: 40px;
+
+}
+.login-menu{
+    display: none;
+}
+.login{
+    display: flex;
+    gap: 10px;
+}
+.barra-rolagem{
+    width: 1%;
+    background: linear-gradient(to right, rgb(0, 140, 0), rgba(2, 189, 2, 0.755), white 130%);
+    height: 5px;
+    position: absolute;
+    top: 0;
+
+}
+
+#btn-mobile{
+    cursor: pointer;
+    display: flex;
+    border: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: inherit;
+}
+#hambu{
+    border-top: 2px solid;
+    width: 20px;
+    display: none;
+}
+
+#hambu::after, #hambu::before{
+    content: "";
+    display: none;
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: black;
+}
+#fecharMenu{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    border: none;
+    background-color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 1110px) {
+    .header{
+        justify-content: space-around;
+    }
+    .lista-primaria{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30vw;
+        z-index: 12123;
+        background-color: var(--cor-secundaria);
+        color: white;
+        transform: scaleX(0);
+        transform-origin: top right;
+        padding: 40px;
+        transition: padding .3s ease, transform .3s ease, opacity .3s ease;
+     
+    }
+    .lista-primaria.ativo{
+        transform: scaleX(1);
+
+    }
+
+    #hambu, #hambu::after, #hambu::before{
+        display: block;
+        
+    }
+
+    #fecharMenu{
+        display: block;
+
+    }
+
+    .login{
+        display: none;
+    }
+    .login-menu{
+        display: block;
+    }
+
+}
