@@ -10,14 +10,17 @@ export default function initAnimaScroll(){
             if(eVisivel)
             secao.classList.add('ativado');
         });
+        function handleMediaChange(mediaQueryList) {
+          if (mediaQueryList.matches) {
         
-        if(mediaQueryList){
             document.documentElement.className = '';
-        }
-        else{
+          } else {
+        
             document.documentElement.className = 'js';
-
+          }
         }
+        mediaQueryList.addListener(handleMediaChange);
+        handleMediaChange(mediaQueryList);
         window.addEventListener('scroll', animaScroll)
 
     }
